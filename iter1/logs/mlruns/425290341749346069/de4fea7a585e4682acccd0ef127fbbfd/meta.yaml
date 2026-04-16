@@ -1,0 +1,14 @@
+artifact_uri: file:///content/breast-cancer-dce-mri-classification/iter1/logs/mlruns/425290341749346069/de4fea7a585e4682acccd0ef127fbbfd/artifacts
+end_time: 1776296955872
+entry_point_name: ''
+experiment_id: '425290341749346069'
+lifecycle_stage: active
+run_id: de4fea7a585e4682acccd0ef127fbbfd
+run_name: resnet50_iter1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776296727778
+status: 3
+tags: []
+user_id: root

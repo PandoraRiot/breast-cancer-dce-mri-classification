@@ -1,0 +1,47 @@
+experiment:
+  name: BreastDCE_TransferLearning_iter1
+  iteration: iter1
+  seed: 42
+  priority: recall
+data:
+  dataset_root: /content/dataset
+  train_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_TRAIN.csv
+  val_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_VAL.csv
+  test_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_TEST.csv
+  n_train: 1202
+  n_val: 117
+  n_test: 403
+  n_benign: 327
+  n_malignant: 875
+  imbalance_ratio: 2.68
+  image_size:
+  - 3
+  - 256
+  - 256
+  channels:
+  - VIBRANT (pre)
+  - VIBRANT+C2 (early)
+  - VIBRANT+C7 (late)
+training:
+  batch_size: 16
+  epochs_frozen: 5
+  epochs_finetune: 25
+  lr_frozen: 0.001
+  lr_finetune: 5.0e-05
+  weight_decay: 0.0001
+  dropout: 0.4
+  patience: 7
+  optimizer: AdamW
+  scheduler: CosineAnnealingLR
+  loss: BCEWithLogitsLoss + pos_weight
+  threshold: 0.5
+models:
+- resnet50
+- efficientnet_b3
+metrics_priority:
+- AUC-ROC
+- Recall/Sensibilidad
+- F1
+- Especificidad
+- Precision
+- BalancedAcc

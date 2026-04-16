@@ -1,0 +1,8 @@
+artifact_location: file:///content/breast-cancer-dce-mri-classification/iter1/logs/mlruns/425290341749346069
+creation_time: 1776296539138
+experiment_id: '425290341749346069'
+last_update_time: 1776296539138
+lifecycle_stage: active
+name: BreastDCE_TransferLearning_iter1
+trace_location: null
+workspace: default
