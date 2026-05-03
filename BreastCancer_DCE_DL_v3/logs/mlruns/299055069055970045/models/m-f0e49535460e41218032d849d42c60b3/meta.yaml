@@ -1,0 +1,10 @@
+artifact_location: file:///content/breast-cancer-dce-mri-classification/BreastCancer_DCE_DL_v3/logs/mlruns/299055069055970045/models/m-f0e49535460e41218032d849d42c60b3/artifacts
+creation_timestamp: 1777843813740
+experiment_id: '299055069055970045'
+last_updated_timestamp: 1777843824313
+model_id: m-f0e49535460e41218032d849d42c60b3
+model_type: null
+name: model_mobilevit_s
+source_run_id: 62743c036e3c4a50a446b65c0380e803
+status: 2
+status_message: null

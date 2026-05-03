@@ -1,0 +1,14 @@
+artifact_uri: file:///content/breast-cancer-dce-mri-classification/BreastCancer_DCE_DL_v3/logs/mlruns/299055069055970045/62743c036e3c4a50a446b65c0380e803/artifacts
+end_time: 1777843824317
+entry_point_name: ''
+experiment_id: '299055069055970045'
+lifecycle_stage: active
+run_id: 62743c036e3c4a50a446b65c0380e803
+run_name: mobilevit_s_BreastCancer_DCE_DL
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777843654399
+status: 3
+tags: []
+user_id: root

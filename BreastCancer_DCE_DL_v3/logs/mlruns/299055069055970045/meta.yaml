@@ -1,0 +1,8 @@
+artifact_location: file:///content/breast-cancer-dce-mri-classification/BreastCancer_DCE_DL_v3/logs/mlruns/299055069055970045
+creation_time: 1777842619559
+experiment_id: '299055069055970045'
+last_update_time: 1777842619559
+lifecycle_stage: active
+name: BreastCancer_DCE_DL_v3
+trace_location: null
+workspace: default

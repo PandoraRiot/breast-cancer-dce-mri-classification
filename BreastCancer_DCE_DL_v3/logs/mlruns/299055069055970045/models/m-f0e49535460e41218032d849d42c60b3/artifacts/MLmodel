@@ -1,0 +1,23 @@
+artifact_path: file:///content/breast-cancer-dce-mri-classification/BreastCancer_DCE_DL_v3/logs/mlruns/299055069055970045/models/m-f0e49535460e41218032d849d42c60b3/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.12.13
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.10.0+cu128
+mlflow_version: 3.11.1
+model_id: m-f0e49535460e41218032d849d42c60b3
+model_size_bytes: 19970803
+model_uuid: m-f0e49535460e41218032d849d42c60b3
+prompts: null
+run_id: 62743c036e3c4a50a446b65c0380e803
+utc_time_created: '2026-05-03 21:30:13.747709'

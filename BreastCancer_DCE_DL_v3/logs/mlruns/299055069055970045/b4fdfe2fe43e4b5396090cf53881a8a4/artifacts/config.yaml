@@ -1,0 +1,67 @@
+augmentation:
+  hflip_prob: 0.5
+  rotation_deg: 12
+  scale_range:
+  - 0.92
+  - 1.08
+  translate: 0.05
+data:
+  approach_justification: '2.5D pseudo-RGB: pre/early/late como canales'
+  channels:
+  - VIBRANT_pre
+  - VIBRANT+C2_early
+  - VIBRANT+C7_late
+  dataset_root: /content/dataset
+  image_size:
+  - 256
+  - 256
+  n_benign: 327
+  n_malignant: 875
+  n_test: 403
+  n_train: 1202
+  n_val: 117
+  prediction_level: patient
+  test_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_TEST.csv
+  train_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_TRAIN.csv
+  val_csv: /content/breast-cancer-dce-mri-classification/data/processed/BREAST_ROI_VAL.csv
+experiment:
+  clinical_target:
+    sensitivity: 0.95
+  description: "Transfer Learning + Fine-Tuning Progresivo | 5-Fold CV | RadImageNet\
+    \ | MobileViT-S | Umbral cl\xEDnico \u22650.95 sensibilidad"
+  iteration: v3
+  name: BreastCancer_DCE_DL_v3
+  paper_target:
+    acc: 0.882
+    auc: 0.9154
+  priority: recall
+  proyecto: BreastCancer_DCE_DL
+  seed: 42
+  timestamp: 2026-05-03 21:10
+kfold:
+  n_splits: 2
+  stratify_by: patient
+models:
+- resnet50
+- efficientnet_b3
+- mobilevit_s
+normalization:
+  clip_percentile:
+  - 1
+  - 99
+  method: zscore_per_study
+pretrain:
+  efficientnet_b3: ImageNet
+  mobilevit_s: ImageNet
+  resnet50: RadImageNet
+training:
+  batch_size: 32
+  dropout: 0.4
+  epochs_finetune: 20
+  epochs_frozen: 10
+  lr_finetune: 3.0e-05
+  lr_head: 0.001
+  lr_transformer: 0.0001
+  patience: 5
+  recall_target: 0.95
+  weight_decay: 0.0001
